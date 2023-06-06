@@ -1,0 +1,28 @@
+{
+  "ImportReact": {
+    "prefix": "irc",
+    "body": [
+      "import * as React from 'react'",
+    ],
+    "description": "Import React"
+  },
+  "ReactFunctionComponent": {
+    "prefix": "rfc",
+    "body": [
+      "import * as React from 'react'",
+      "",
+      "const ${1:ComponentName} = () => {",
+      "  return ()",
+      "}",
+      "",
+      "export default ${1:ComponentName}"
+    ],
+    "description": "Function component"
+  },
+  "UsingReactProps": {
+    "prefix": "cprops",
+    "body": [
+      "const { ${1:} } = props"
+    ]
+  }
+}
