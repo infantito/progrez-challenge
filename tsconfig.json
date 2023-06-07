@@ -23,6 +23,6 @@
       "@*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "node_modules/@types", "app/api/rutas/route.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "node_modules/@types", "app/api/rutas/route.ts", "@types"],
   "exclude": ["node_modules"]
 }

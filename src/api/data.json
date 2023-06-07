@@ -1,0 +1,45 @@
+[
+  {
+    "title": "Lista de tarjetas",
+    "children": [
+      {
+        "title": "Crédito"
+      },
+      {
+        "title": "Débito"
+      }
+    ]
+  },
+  {
+    "title": "Transferencias y pagos",
+    "children": [
+      {
+        "title": "Entre tarjetas"
+      },
+      {
+        "title": "Cuenta bancaria"
+      },
+      {
+        "title": "Tarjetas de crédito"
+      }
+    ]
+  },
+  {
+    "title": "Atención al cliente",
+    "children": [
+      {
+        "title": "Preguntas"
+      },
+      {
+        "title": "Red de agencias"
+      },
+      {
+        "title": "Contacto"
+      }
+    ]
+  },
+  {
+    "title": "Empresas",
+    "children": []
+  }
+]

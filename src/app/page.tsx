@@ -1,15 +1,15 @@
 import styles from './page.module.scss'
 
-import Image from 'next/image'
+import { Header } from '@containers'
 
-export default function Home() {
+function Page() {
   return (
     <main className={styles.main}>
-      <article className="wrapper">
-        <header className="header"></header>
-        <section className="content"></section>
-        <footer className="footer"></footer>
-      </article>
+      <Header />
+      <section className={styles.content}></section>
+      <footer className={styles.footer}></footer>
     </main>
   )
 }
+
+export default Page
