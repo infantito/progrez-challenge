@@ -1,25 +1,18 @@
+import arrowImg from '@assets/arrow.svg'
 import styles from './header.module.scss'
 
 import * as React from 'react'
 
-import type { HeaderChildrenProps } from '@types'
 import data from '@api/data.json'
 
-const Hamburger = () => {
-  return (
-    <>
-      <input id="toggle" className="toggle" type="checkbox" />
-      <label className="toggleLabel" htmlFor="toggle">
-        <div className="toggleButton"></div>
-      </label>
-    </>
-  )
-}
+import type { HeaderChildrenProps } from '@types'
+import { Hamburger } from '@components'
+import Image from 'next/image'
 
 const HeaderChildren = (props: HeaderChildrenProps) => {
   const { options } = props
 
-  if (Array.isArray(options)) {
+  if (Array.isArray(options) && options.length > 0) {
     return (
       <ul className={styles.children}>
         {options.map(child => (
@@ -41,11 +34,11 @@ const Header = () => {
         <span className={styles.logo}>Tu PruTec</span>
         <button className={styles.button}>
           <span className={styles.text}>Nombre de usuario</span>
-          <span className={styles.arrow}>▲▼</span>
+          <Image className={styles.arrow} src={arrowImg} alt="▼" />
         </button>
       </div>
-
-      <nav className={styles.menu}>
+      <Hamburger />
+      <nav id="menu" className={`${styles.menu} menu`}>
         <ul className={styles.list}>
           {data.map(parent => (
             <li key={parent.title} className={styles.parent}>
