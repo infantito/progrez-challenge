@@ -3,9 +3,7 @@ import styles from './header.module.scss'
 
 import * as React from 'react'
 
-import data from '@api/data.json'
-
-import type { HeaderChildrenProps } from '@types'
+import type { HeaderChildrenProps, HeaderProps } from '@types'
 import { Hamburger } from '@components'
 import Image from 'next/image'
 
@@ -27,7 +25,9 @@ const HeaderChildren = (props: HeaderChildrenProps) => {
   return null
 }
 
-const Header = () => {
+const Header = (props: HeaderProps) => {
+  const { menu } = props
+
   return (
     <header className={styles.header}>
       <div className={styles.banner}>
@@ -40,7 +40,7 @@ const Header = () => {
       <Hamburger />
       <nav id="menu" className={`${styles.menu} menu`}>
         <ul className={styles.list}>
-          {data.map(parent => (
+          {menu.map(parent => (
             <li key={parent.title} className={styles.parent}>
               {Array.isArray(parent.children) && parent.children.length > 0 ? (
                 <span className={styles.parentLink}>{parent.title}</span>

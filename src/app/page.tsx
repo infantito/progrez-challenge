@@ -8,7 +8,7 @@ const backgroundImage = `url(${bgImage.src})`
 function Page() {
   return (
     <main className={styles.main}>
-      <Header />
+      <Header menu={[]} />
       <section className={styles.content} style={{ backgroundImage }}></section>
       <Footer />
     </main>
