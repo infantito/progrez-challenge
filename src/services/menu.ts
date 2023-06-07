@@ -2,7 +2,7 @@ import type { Menu } from '@types'
 import { API_DOMAIN } from '@constants'
 
 async function fetchMenuApi() {
-  const pathname = `${API_DOMAIN}/api/hello`
+  const pathname = `${API_DOMAIN}/api`
 
   const response = await fetch(pathname, {
     method: 'GET',
